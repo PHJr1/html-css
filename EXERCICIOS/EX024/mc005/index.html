@@ -34,8 +34,21 @@
             background-color:rgb(60, 101, 102);
             text-align: center;}
 
-        menu li{
-            display: inline-block;
+        span#burguer {
+            display: block;
+            text-align: center;
+            color: white;
+            background-color: rgb(60, 101, 102);
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        span#burguer:hover {
+            color: brown;
+        }
+
+        menu a{
+            display: none;
             padding: 10px;
             text-align: center;
         }
@@ -45,24 +58,23 @@
             text-align: center;
         }
 
-        li:hover {
-            background-color: cadetblue;
+        menu    a:hover {
+            background-color: rgba(95, 158, 160, 0.397);
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Meu Site</h1>
-        <span class="material-icons">
-            menu
+        <span id="burguer" class="material-icons" onclick="clickMenu()" >     menu
             </span>
-        <menu>
+        <menu id="itens">
             <ul>
-                <li>opção 1</li>
-                <li>opção 2</li>
-                <li>opção 3</li>
-                <li>opção 4</li>
-                <li>opção 5</li>
+                <li><a href="#"></a>opção 1</li>
+                <li><a href="#"></a>opção 2</li>
+                <li><a href="#"></a>opção 3</li>
+                <li><a href="#"></a>opção 4</li>
+                <li><a href="#"></a>opção 5</li>
             </ul>
         </menu>
     </header>
@@ -75,5 +87,14 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut expedita doloribus rem? Blanditiis eligendi consectetur sed quis magni iusto, error quia veniam rem quo doloribus aspernatur architecto excepturi laboriosam quasi!</p>
         </article>
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
